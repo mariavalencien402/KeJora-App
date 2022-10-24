@@ -19,6 +19,7 @@ class DetailWisata extends StatelessWidget {
       body: Container(
           alignment: Alignment.centerLeft,
           margin: const EdgeInsets.all(20),
+          child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -112,6 +113,7 @@ class DetailWisata extends StatelessWidget {
               ),
             ],
           )),
+    ),
     );
   }
 }
