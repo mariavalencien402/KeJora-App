@@ -4,21 +4,19 @@ import 'package:kejora_app/const.dart';
 import '../model/wisata.dart';
 
 class AboutUsScreen extends StatelessWidget {
-
   const AboutUsScreen({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: <Widget>[
-      Container(
+    return SingleChildScrollView(
+      child: Container(
           alignment: Alignment.centerLeft,
           margin: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-
               //Nama Aplikasi
               Container(
                 alignment: Alignment.center,
@@ -95,7 +93,7 @@ class AboutUsScreen extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children:[
+                  children: [
                     //WA
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -104,7 +102,7 @@ class AboutUsScreen extends StatelessWidget {
                           imgWA,
                           fit: BoxFit.fill,
                           width: 35,
-                          height:35,
+                          height: 35,
                         ),
                         const Text(
                           appWa,
@@ -124,7 +122,7 @@ class AboutUsScreen extends StatelessWidget {
                           imgTelegram,
                           fit: BoxFit.fill,
                           width: 29,
-                          height:29,
+                          height: 29,
                         ),
                         const Text(
                           appTelegram,
@@ -144,7 +142,7 @@ class AboutUsScreen extends StatelessWidget {
                           imgEmail,
                           fit: BoxFit.fill,
                           width: 30,
-                          height:30,
+                          height: 30,
                         ),
                         const Text(
                           appEmail,
@@ -179,7 +177,7 @@ class AboutUsScreen extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children:[
+                  children: [
                     //Instagram
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -188,7 +186,7 @@ class AboutUsScreen extends StatelessWidget {
                           imgInstagram,
                           fit: BoxFit.fill,
                           width: 30,
-                          height:30,
+                          height: 30,
                         ),
                         const Text(
                           appInstagram,
@@ -208,7 +206,7 @@ class AboutUsScreen extends StatelessWidget {
                           imgYoutube,
                           fit: BoxFit.fill,
                           width: 38,
-                          height:30,
+                          height: 30,
                         ),
                         const Text(
                           appYoutube,
@@ -228,7 +226,7 @@ class AboutUsScreen extends StatelessWidget {
                           imgTwitter,
                           fit: BoxFit.fill,
                           width: 37,
-                          height:37,
+                          height: 37,
                         ),
                         const Text(
                           appTwitter,
@@ -248,7 +246,7 @@ class AboutUsScreen extends StatelessWidget {
                           imgFacebook,
                           fit: BoxFit.fill,
                           width: 35,
-                          height:35,
+                          height: 35,
                         ),
                         const Text(
                           appFacebook,
@@ -264,6 +262,6 @@ class AboutUsScreen extends StatelessWidget {
               ),
             ],
           )),
-    ]);
+    );
   }
 }
