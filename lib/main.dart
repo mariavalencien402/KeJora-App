@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// the old _NavBar class just renamed.
 class AppMainPage extends StatefulWidget {
   const AppMainPage({super.key});
 
@@ -36,30 +35,29 @@ class AppMainPage extends StatefulWidget {
   State<AppMainPage> createState() => _AppMainPageState();
 }
 
-// The old _NavBarState class, just renamed.
 class _AppMainPageState extends State<AppMainPage> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    //HomeScreen(), mocking widget
+    //HomeScreen()
     Container(
       // color: Colors.white,
       color: Colors.white,
       child: const HomeScreen(),
     ),
 
-    //NewsScreen(), mocking widget
+    //NewsScreen()
     Container(
       color: Colors.white,
       child: const NewsScreen(),
     ),
 
-    //AboutUs(),mocking widget
+    //AboutUs()
     Container(
       color: Colors.white,
       child: const AboutUsScreen(),
     ),
 
-    //Profile(),mocking widget
+    //Profile()
     Container(
       child: const ProfileScreen(),
     ),
@@ -75,7 +73,7 @@ class _AppMainPageState extends State<AppMainPage> {
   Widget build(BuildContext context) {
     final currentWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: currentWidth < 600 ? Colors.white : Colors.brown,
+      backgroundColor: currentWidth < 600 ? Colors.blue : Colors.brown,
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTappedBar,
