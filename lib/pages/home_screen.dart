@@ -35,14 +35,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 margin: const EdgeInsets.all(25),
                 child: Text(
                   textAlign: TextAlign.center,
-                  "SELAMAT DATANG DI KEJORA APP!",
+                  "Welcome to KeJora!\n\n Let's get around with KeJora\n\n (Keliling Jogjakarta)",
                   style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 218, 199, 192),
                       fontWeight: FontWeight.w600,
-                      fontSize: 18,
+                      fontSize: 20,
                       background: Paint()
-                        ..strokeWidth = 30.0
-                        ..color = Colors.brown
+                        ..strokeWidth = 25.0
+                        ..color = Color.fromARGB(255, 81, 53, 42)
                         ..style = PaintingStyle.stroke
                         ..strokeJoin = StrokeJoin.round),
                 ),
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
             controller: controller,
             decoration: InputDecoration(
               prefixIcon: const Icon(Icons.search),
-              hintText: "yuk berwisata di Jogja!",
+              hintText: "Mau Berwisata Kemana?",
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(40),
                   borderSide: const BorderSide(width: 3, color: Colors.brown)),

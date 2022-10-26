@@ -73,7 +73,7 @@ class _AppMainPageState extends State<AppMainPage> {
   Widget build(BuildContext context) {
     final currentWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: currentWidth < 600 ? Colors.blue : Colors.brown,
+      backgroundColor: currentWidth < 600 ? Colors.white : Colors.brown,
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTappedBar,

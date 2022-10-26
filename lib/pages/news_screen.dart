@@ -22,15 +22,14 @@ class _NewsScreenState extends State<NewsScreen> {
           child: Text(
             "BERITA WISATA JOGJA",
             style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
                 background: Paint()
                   ..strokeWidth = 25.0
                   ..color = Colors.brown
                   ..style = PaintingStyle.stroke
-                  ..strokeJoin = StrokeJoin.round
-            ),
+                  ..strokeJoin = StrokeJoin.round),
           ),
         ),
 
@@ -51,23 +50,6 @@ class _NewsScreenState extends State<NewsScreen> {
           ),
         ),
 
-        //LIST TILE
-        Expanded(
-            child: ListView.builder(
-                itemCount: news.length,
-                itemBuilder: (context, index) {
-                  final itemNews = news[index];
-                  return ListTile(
-                    contentPadding: const EdgeInsets.fromLTRB(16, 5, 16, 5),
-                    leading: Image.asset(
-                      itemNews.pathImage,
-                      fit: BoxFit.fill,
-                      width: 50,
-                      height:50,
-                    ),
-                    title: Text(itemNews.title),
-                  );
-                })),
         // SingleChildScrollView(
         //   child: Column(
         //     mainAxisSize: MainAxisSize.min,
@@ -94,6 +76,24 @@ class _NewsScreenState extends State<NewsScreen> {
         //     ],
         //   ),
         // ),
+
+        //LIST TILE
+        Expanded(
+            child: ListView.builder(
+                itemCount: news.length,
+                itemBuilder: (context, index) {
+                  final itemNews = news[index];
+                  return ListTile(
+                    contentPadding: const EdgeInsets.fromLTRB(16, 5, 16, 5),
+                    leading: Image.asset(
+                      itemNews.pathImage,
+                      fit: BoxFit.fill,
+                      width: 50,
+                      height: 50,
+                    ),
+                    title: Text(itemNews.title),
+                  );
+                })),
       ],
     );
   }
